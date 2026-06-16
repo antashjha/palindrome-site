@@ -27,9 +27,51 @@
   border-radius: var(--radius-sm);
 }
 
-.input:focus {
-  outline: none;
+.input:focus-visible {
+  outline: 2px solid var(--tan);
+  outline-offset: 2px;
   border-color: var(--tan);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.counter {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--tan);
+  background: rgba(209, 154, 113, 0.1);
+  border: 1px solid rgba(209, 154, 113, 0.3);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.chip:hover {
+  background: rgba(209, 154, 113, 0.22);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--tan);
+  outline-offset: 2px;
 }
 
 .stage {
@@ -62,12 +104,55 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
 .verdict {
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
 }
 
+.actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.actionButton {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--near-black);
+  background: var(--tan);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.actionButton:hover:not(:disabled) {
+  background: #e0b287;
+}
+
+.actionButton:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.actionButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 @media (max-width: 480px) {
   .wrap { padding: var(--space-3); }
   .rowLabel { width: auto; }
+  .footer { flex-direction: column; align-items: stretch; }
+  .actions { justify-content: stretch; }
+  .actionButton { flex: 1; }
 }

@@ -22,3 +22,11 @@
   gap: var(--space-3);
   font-size: 0.85rem;
 }
+
+.links a {
+  transition: color 0.15s ease;
+}
+
+.links a:hover {
+  color: var(--rich);
+}

@@ -1,9 +1,14 @@
 .row {
+  position: relative;
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.visual {
   display: inline-flex;
   gap: 0.1em;
   perspective: 500px;
-  font-family: var(--font-mono);
-  font-weight: 700;
 }
 
 .char {
@@ -35,6 +40,18 @@
 .match { color: var(--rich); }
 .mismatch { color: var(--medium); }
 .tan { color: var(--tan); }
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .char {

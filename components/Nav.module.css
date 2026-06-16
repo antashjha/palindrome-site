@@ -12,6 +12,7 @@
   justify-content: space-between;
   padding-top: var(--space-2);
   padding-bottom: var(--space-2);
+  position: relative;
 }
 
 .brand {
@@ -63,11 +64,73 @@
   border-bottom-color: var(--rich);
 }
 
+.toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggleBar {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--dark-brown);
+  border-radius: 1px;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--rich);
+  outline-offset: 2px;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @media (max-width: 520px) {
   .brand span:last-child {
     display: none;
   }
+
+  .toggle {
+    display: flex;
+  }
+
   .links {
-    gap: var(--space-2);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .links.open {
+    max-height: 14rem;
+  }
+
+  .link {
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--border);
   }
 }
