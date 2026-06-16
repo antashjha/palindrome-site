@@ -1,9 +1,3 @@
-/* ============================================================
-   PALINDROME LAB — design tokens
-   Palette is intentionally narrow: warm umber/tan range only.
-   No accent colors outside this set — restraint is the point.
-   ============================================================ */
-
 :root {
   --tan: #D19A71;
   --dark-brown: #5F3712;
@@ -11,11 +5,10 @@
   --medium: #A2734D;
   --rich: #714824;
 
-  --bg: #FBF8F4;          /* near-white, warmed to match the palette */
+  --bg: #FBF8F4;
   --surface: #F3ECE3;
   --border: rgba(95, 55, 18, 0.16);
 
-  /* Overridden by next/font variables applied on the app wrapper in _app.js */
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'Courier New', ui-monospace, monospace;
