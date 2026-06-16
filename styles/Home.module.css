@@ -1,0 +1,151 @@
+.hero {
+  padding: var(--space-5) 0 var(--space-4);
+}
+
+.heroSub {
+  max-width: 640px;
+  margin-top: var(--space-2);
+  font-size: 1.1rem;
+  color: var(--medium);
+}
+
+.heroDemo {
+  margin-top: var(--space-4);
+  max-width: 640px;
+}
+
+.section {
+  padding: var(--space-5) 0;
+}
+
+.sectionAlt {
+  padding: var(--space-5) 0;
+  background: var(--surface);
+}
+
+.lead {
+  max-width: 680px;
+  margin-top: var(--space-2);
+  color: var(--medium);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.cardTag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--medium);
+}
+
+.cardNum {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--rich);
+  margin: var(--space-1) 0;
+}
+
+.cardNote {
+  font-size: 0.9rem;
+  color: var(--near-black);
+}
+
+.codeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.codeBlock h3 {
+  margin-bottom: var(--space-2);
+}
+
+.pre {
+  background: var(--near-black);
+  color: var(--tan);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  overflow-x: auto;
+}
+
+.codeNote {
+  margin-top: var(--space-1);
+  font-size: 0.88rem;
+  color: var(--medium);
+}
+
+.cta {
+  padding: var(--space-5) 0;
+  background: var(--dark-brown);
+  color: #fff;
+}
+
+.cta h2 {
+  color: #fff;
+}
+
+.cta .lead {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.ctaButton {
+  display: inline-block;
+  margin-top: var(--space-3);
+  background: var(--tan);
+  color: var(--near-black);
+  font-weight: 600;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-sm);
+}
+
+.ctaButton:hover {
+  text-decoration: none;
+  background: #e0b287;
+}
+
+.faqList {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 720px;
+}
+
+.faqItem {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+}
+
+.faqQ {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--dark-brown);
+}
+
+.faqA {
+  margin-top: var(--space-2);
+  color: var(--medium);
+}
+
+@media (max-width: 760px) {
+  .cards { grid-template-columns: 1fr; }
+  .codeGrid { grid-template-columns: 1fr; }
+}

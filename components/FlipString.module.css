@@ -1,0 +1,43 @@
+.row {
+  display: inline-flex;
+  gap: 0.1em;
+  perspective: 500px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.char {
+  display: inline-block;
+  transform-origin: 50% 60%;
+  animation: flipReveal 0.55s cubic-bezier(0.22, 0.8, 0.2, 1) backwards;
+}
+
+@keyframes flipReveal {
+  0% {
+    transform: rotateX(-100deg) translateY(-8%);
+    opacity: 0;
+  }
+  55% {
+    transform: rotateX(18deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.sm { font-size: clamp(1.1rem, 3vw, 1.4rem); }
+.md { font-size: clamp(1.6rem, 5vw, 2.6rem); }
+.lg { font-size: clamp(2.2rem, 8vw, 4rem); }
+
+.default { color: var(--near-black); }
+.match { color: var(--rich); }
+.mismatch { color: var(--medium); }
+.tan { color: var(--tan); }
+
+@media (prefers-reduced-motion: reduce) {
+  .char {
+    animation: none;
+  }
+}
