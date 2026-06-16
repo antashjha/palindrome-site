@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 const SITE_NAME = 'Palindrome Lab';
-const SITE_URL = 'https://palindrome-site.vercel.app/';
+const SITE_URL = 'https://palindrome-site.vercel.app';
 
 export default function SEOHead({ title, description, path = '/', jsonLd }) {
   const fullTitle = `${title} | ${SITE_NAME}`;
